@@ -6,3 +6,5 @@ target/
 .pydevproject
 dist/
 /sparktest.iml
+/python/pyrander/_version.py
+/python/pyrander/version.py
