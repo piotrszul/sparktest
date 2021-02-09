@@ -14,7 +14,7 @@ if in_src:
         pom = pomf.read()
     version_match = re.search('<version>([\d\.]+)(?:-(\w+))?(?:-([\d]+)-SNAPSHOT)?</version>', pom)
     version = "".join(
-        [vc if i != 2 else ".dev%s" % vc for i, vc in enumerate(version_match.groups())])
+        [vc if i != 2 else ".dev%s" % vc for i, vc in enumerate(version_match.groups()) if vc])
     print("Version from: %s is: %s" % (pom_file, version))
     print("Writing version file in: %s" % os.path.abspath("."))
     with open("pyrander/version.py", "w") as vf:
