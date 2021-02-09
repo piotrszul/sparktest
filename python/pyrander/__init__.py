@@ -4,4 +4,4 @@
 
 __all__ = ['say_hello']
 
-from .core import *
+from .core import say_hello
