@@ -2,9 +2,6 @@ Projec to test github actions, etc.
 Added maven caching.
 
 
-
-
-
 ## InteliJ Setup
 
 ### Python File templates
