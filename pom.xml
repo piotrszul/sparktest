@@ -7,7 +7,7 @@
   <artifactId>sparktest</artifactId>
   <packaging>jar</packaging>
   <description>smsa-model</description>
-  <version>0.2.0-a0-0-SNAPSHOT</version>
+  <version>0.2.0-a0-SNAPSHOT</version>
   <name>tribes2</name>
   <organization>
     <name>CSIRO</name>
