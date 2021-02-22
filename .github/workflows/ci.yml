@@ -11,17 +11,9 @@ on:
 
 jobs:
   build:
-
+      env:
+        BUILD_TYPE: issue
     runs-on: ubuntu-latest
-    steps:
-      - name: Extract version from branch name (for release branches)
-        if: startsWith(github.event.pull_request.head.ref, 'issue/')
-        run: |
-          BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
-          VERSION=${BRANCH_NAME#release/}
-          echo "BUILD_VERSION=$VERSION" >> $GITHUB_ENV
-          echo "BUILD_TYPE=issue" >> $GITHUB_ENV
-
       - name: Extract version from branch name (for release branches)
         if: startsWith(github.event.pull_request.head.ref, 'release/')
         run: |
