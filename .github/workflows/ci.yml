@@ -11,9 +11,11 @@ on:
 
 jobs:
   build:
-      env:
-        BUILD_TYPE: issue
+
     runs-on: ubuntu-latest
+    env:
+      BUILD_TYPE: issue
+    steps:
       - name: Extract version from branch name (for release branches)
         if: startsWith(github.event.pull_request.head.ref, 'release/')
         run: |
